@@ -1,0 +1,11 @@
+_G.on = false
+
+while _G.on do
+   local playerHead = game.Players.LocalPlayer.Character.Head
+    for i,v in pairs(game:GetService("Workspace").Interactables.MorphTriggers:GetDescendants()) do
+        if v.ClassName == "MeshPart" and v.Parent then
+Game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(v.Position)
+wait(2)
+   end
+    end
+end
