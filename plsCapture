@@ -1,0 +1,13 @@
+Unlock every Modifier/Skin in the game[Not permanent; but everything you have equipped will save]
+
+for i,v in pairs(game:GetService("Players").LocalPlayer.DataSave.Common.FillOnStart:GetDescendants()) do
+    if v.ClassName == "BoolValue" then
+        v.Value = true
+    end
+end
+
+Auto-Clicker [Don't Execute Twice or you'll be banned]
+
+for i = 1,280 do -- Change 280 to anything higher than the current amount of clicks needed
+game:GetService("ReplicatedStorage").RemoteCalls.GameSpecific.Capture.DecreaseClicksLeft:InvokeServer()
+end
